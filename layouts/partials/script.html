@@ -1,0 +1,13 @@
+{{ $fontawesome := resources.Get "js/fontawesome/fontawesome.js" | minify }}
+{{ $fa_brands := resources.Get "js/fontawesome/brands.js" | minify }}
+{{ $fa_solid := resources.Get "js/fontawesome/solid.js" | minify }}
+{{ $jquery := resources.Get "js/jquery/jquery-3.3.1.slim.js" | minify }}
+{{ $highlight := resources.Get "js/highlight/highlight.pack.js" }}
+{{ $main := resources.Get "js/main.js" | minify }}
+{{ $bundle := slice $fontawesome $fa_brands $fa_solid $jquery $highlight $main | resources.Concat "js/bundle.js" | fingerprint }}
+<script src="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+{{ if .Site.Params.enableGoogleAnalytics }}
+{{ template "_internal/google_analytics.html" . }}
+{{ end }}

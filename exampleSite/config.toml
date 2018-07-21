@@ -1,0 +1,38 @@
+# General settings
+baseURL = "your_site_url_address"
+languageCode = "en-us"
+title = "Site Title"
+theme = "cactus-plus-plus"
+googleAnalytics = "your_google_analytics_id"
+
+[params]
+	# General
+	author = "Site Author"
+	description = "Site Description"
+	bio = "Author Biography"
+
+	# RSS
+	enableRSS = true
+	
+	# ToC
+	enableToc = true
+
+	# Post summaries
+	enableSummary = true
+	useDescriptionReplaceSummary = true
+
+    # Google Analytics
+	enableGoogleAnalytics = false
+
+	# Post settings
+	showLatestPosts = false
+
+	# Error page
+	title404 = ""
+	subtitle404 = ""
+
+# Social links
+[social]
+	facebook = "https://facebook.com/yourname"
+	twitter = "https://twitter.com/yourname"
+	github = "https://github.com/yourname"

@@ -1,0 +1,17 @@
+name = "Cactus Plus Plus"
+license = "MIT"
+licenselink = "https://github.com/lukasmalkmus/hugo-theme-cactus-plus-plus/blob/master/LICENSE"
+description = "A minimalistic and responsive theme for bloggers."
+homepage = "https://github.com/lukasmalkmus/hugo-theme-cactus-plus-plus"
+tags = ["blog", "beautiful", "minimalistic", "rss", "syntax highlighting", "tags"]
+features = ["blog", "beautiful", "minimalistic", "rss", "syntax highlighting", "tags"]
+min_version = 0.44
+
+[author]
+  name = "Lukas Malkmus"
+  homepage = "https://github.com/lukasmalkmus"
+
+[[original]]
+  name = "Cactus Plus"
+  homepage = "https://themes.gohugo.io/hugo-theme-cactus-plus"
+  repo = "https://github.com/nodejh/hugo-theme-cactus-plus"
