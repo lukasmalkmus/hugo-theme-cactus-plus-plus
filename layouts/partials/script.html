@@ -1,10 +1,10 @@
-{{ $fontawesome := resources.Get "js/fontawesome/fontawesome.js" | minify }}
-{{ $fa_brands := resources.Get "js/fontawesome/brands.js" | minify }}
-{{ $fa_solid := resources.Get "js/fontawesome/solid.js" | minify }}
-{{ $jquery := resources.Get "js/jquery/jquery-3.3.1.slim.js" | minify }}
+{{ $fontawesome := resources.Get "js/fontawesome/fontawesome.js" }}
+{{ $fa_brands := resources.Get "js/fontawesome/brands.js" }}
+{{ $fa_solid := resources.Get "js/fontawesome/solid.js" }}
+{{ $jquery := resources.Get "js/jquery/jquery-3.3.1.slim.js" }}
 {{ $highlight := resources.Get "js/highlight/highlight.pack.js" }}
-{{ $main := resources.Get "js/main.js" | minify }}
-{{ $bundle := slice $fontawesome $fa_brands $fa_solid $jquery $highlight $main | resources.Concat "js/bundle.js" | fingerprint }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $bundle := slice $fontawesome $fa_brands $fa_solid $jquery $highlight $main | resources.Concat "js/bundle.js" | fingerprint | minify }}
 <script src="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
